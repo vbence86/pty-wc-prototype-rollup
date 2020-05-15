@@ -44,7 +44,7 @@ You can run the newly built app with `npm run start`. This uses [sirv](https://g
 ## Usage
 ```html
 <!-- From CDN -->
-<script async type="module" src="https://unpkg.com/pty-wc-template-rollup@1.0.0/dist/bundle.js"></script>
+<script async type="module" src="https://unpkg.com/pty-wc-template-rollup@^1.0.0/dist/bundle.js"></script>
 
 <!-- From local installation -->
 <script async type="module" src="/node_modules/pty-wc-template-rollup/dist/bundle.js"></script>
