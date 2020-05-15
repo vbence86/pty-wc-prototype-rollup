@@ -48,6 +48,12 @@ You can run the newly built app with `npm run start`. This uses [sirv](https://g
 
 <!-- From local installation -->
 <script async type="module" src="/node_modules/pty-wc-template-rollup/dist/bundle.js"></script>
+
+...
+
+<body>
+  <pty-scoreboard />
+</body>
 ```
 
 ```js
