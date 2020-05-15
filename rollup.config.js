@@ -17,20 +17,20 @@ export default {
     file: `${BUILD_PATH}bundle.js`,
   },
   plugins: [
-    // builds web components if the file is the index.svelte
+    // builds web components if the file is the main.svelte
     svelte({
       // enable run-time checks when not in production
       dev: !production,
       // we're generating a custom element component
       customElement: true,
-      include: /index\.svelte$/,
+      include: /main\.svelte$/,
     }),
 
-    // builds normal svelte components if the target file is not index.svelte
+    // builds normal svelte components if the target file is not main.svelte
     svelte({
       dev: !production,
       customElement: false,
-      exclude: /index\.svelte$/,
+      exclude: /main\.svelte$/,
     }),
 
     // If you have external dependencies installed from
