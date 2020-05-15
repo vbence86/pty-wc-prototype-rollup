@@ -2,7 +2,7 @@
 
 # PTY Web Components Template with Rollup
 
-This is a web component template using [Svelte](https://svelte.dev) [[Storybook](https://rollupjs.org) and [Rollup](). 
+This is a web component template using [Svelte](https://svelte.dev) [Storybook](https://rollupjs.org) and [Rollup](). 
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
@@ -40,6 +40,20 @@ npm run build
 ```
 
 You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+
+## Usage
+```html
+<!-- From CDN -->
+<script async type="module" src="https://unpkg.com/pty-wc-template-rollup@1.0.0/dist/bundle.js"></script>
+
+<!-- From local installation -->
+<script async type="module" src="/node_modules/pty-wc-template-rollup/dist/bundle.js"></script>
+```
+
+```js
+// as a common js module
+import MyComponent from 'pty-wc-template-rollup';
+````
 
 ## References
 ### Svelte Crush Course
