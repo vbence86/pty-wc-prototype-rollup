@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots components/AddPlayer Add Action 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <form
+    class="grid-3"
+  >
+    <input
+      placeholder="Name"
+      type="text"
+    />
+     
+    <input
+      placeholder="Score"
+      type="text"
+    />
+     
+    <input
+      class="btn"
+      type="submit"
+      value="Add Player"
+    />
+  </form>
+</section>
+`;
+
+exports[`Storyshots components/NavBar With Default Text 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="navbar bg-primary"
+  >
+    Default Text
+  </div>
+</section>
+`;
+
+exports[`Storyshots components/NavBar With Text 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="navbar bg-primary"
+  >
+    some text
+  </div>
+</section>
+`;
+
+exports[`Storyshots components/Player With Controls Closed 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <h1
+    class="svelte-9noqbk"
+  >
+    Test Osteron
+     
+    <button
+      class="btn btn-sm"
+    >
+      +
+    </button>
+     
+    <button
+      class="btn btn-danger btn-sm"
+    >
+      x
+    </button>
+  </h1>
+   
+  <h3>
+    Score: 
+    99
+  </h3>
+   
+  
+</section>
+`;
+
+exports[`Storyshots components/Player With Controls Open 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <h1
+    class="svelte-9noqbk"
+  >
+    Test Osteron
+     
+    <button
+      class="btn btn-sm"
+    >
+      -
+    </button>
+     
+    <button
+      class="btn btn-danger btn-sm"
+    >
+      x
+    </button>
+  </h1>
+   
+  <h3>
+    Score: 
+    99
+  </h3>
+   
+  <button
+    class="btn"
+  >
+    +
+  </button>
+   
+  <button
+    class="btn btn-dark"
+  >
+    -
+  </button>
+   
+  <input
+    type="text"
+  />
+  
+</section>
+`;
+
+exports[`Storyshots pty-scoreboard With No Players 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="navbar bg-primary"
+  >
+    This is my svelte custom element
+  </div>
+   
+  <div
+    class="container"
+  >
+    <form
+      class="grid-3"
+    >
+      <input
+        placeholder="Name"
+        type="text"
+      />
+       
+      <input
+        placeholder="Score"
+        type="text"
+      />
+       
+      <input
+        class="btn"
+        type="submit"
+        value="Add Player"
+      />
+    </form>
+     
+    <p>
+      No players
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots pty-scoreboard With Players 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="navbar bg-primary"
+  >
+    This is my svelte custom element
+  </div>
+   
+  <div
+    class="container"
+  >
+    <form
+      class="grid-3"
+    >
+      <input
+        placeholder="Name"
+        type="text"
+      />
+       
+      <input
+        placeholder="Score"
+        type="text"
+      />
+       
+      <input
+        class="btn"
+        type="submit"
+        value="Add Player"
+      />
+    </form>
+     
+    <h1
+      class="svelte-9noqbk"
+    >
+      John Doe
+       
+      <button
+        class="btn btn-sm"
+      >
+        +
+      </button>
+       
+      <button
+        class="btn btn-danger btn-sm"
+      >
+        x
+      </button>
+    </h1>
+     
+    <h3>
+      Score: 
+      100
+    </h3>
+     
+    
+    <h1
+      class="svelte-9noqbk"
+    >
+      Charles Smith
+       
+      <button
+        class="btn btn-sm"
+      >
+        +
+      </button>
+       
+      <button
+        class="btn btn-danger btn-sm"
+      >
+        x
+      </button>
+    </h1>
+     
+    <h3>
+      Score: 
+      45
+    </h3>
+     
+    
+    <h1
+      class="svelte-9noqbk"
+    >
+      Sam Teller
+       
+      <button
+        class="btn btn-sm"
+      >
+        +
+      </button>
+       
+      <button
+        class="btn btn-danger btn-sm"
+      >
+        x
+      </button>
+    </h1>
+     
+    <h3>
+      Score: 
+      151
+    </h3>
+     
+    
+    
+  </div>
+</section>
+`;
