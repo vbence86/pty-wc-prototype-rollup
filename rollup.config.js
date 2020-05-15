@@ -14,7 +14,7 @@ export default {
     sourcemap: true,
     format: 'iife',
     name: 'app',
-    file: `${BUILD_PATH}pty-scoreboard.js`,
+    file: `${BUILD_PATH}bundle.js`,
   },
   plugins: [
     // builds web components if the file is the index.svelte

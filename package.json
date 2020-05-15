@@ -1,6 +1,7 @@
 {
   "name": "pty-wc-template-rollup",
   "version": "1.0.0",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
