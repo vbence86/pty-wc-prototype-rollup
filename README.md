@@ -29,7 +29,7 @@ npm install
 npm run storybook
 ```
 
-You should see your web component running in a [[Storybook](https://rollupjs.org) test environment. It uses live-reload so all changes will be automatically reflected if any of the files in `src` is updated.
+You should see your web component running in a [Storybook](https://rollupjs.org) test environment. It uses live-reload so all changes will be automatically reflected if any of the files in `src` is updated.
 
 ## Building in production mode
 
