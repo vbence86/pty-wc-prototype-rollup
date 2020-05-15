@@ -45,7 +45,7 @@ You can run the newly built app with `npm run start`. This uses [sirv](https://g
 ### Svelte Crush Course
 https://www.youtube.com/watch?v=uK2RnIzrQ0M
 
-###Event Dispatching with Svelte
+### Event Dispatching with Svelte
 https://www.youtube.com/watch?v=9Bk7XFRMzgI
 
 ### Custom Elements with Svelte
