@@ -17,11 +17,11 @@ exports[`Storyshots components/AddPlayer Add Action 1`] = `
       type="text"
     />
      
-    <input
-      class="btn"
+    <button
       type="submit"
-      value="Add Player"
-    />
+    >
+      Add Player
+    </button>
   </form>
 </section>
 `;
@@ -153,11 +153,11 @@ exports[`Storyshots pty-scoreboard With No Players 1`] = `
         type="text"
       />
        
-      <input
-        class="btn"
+      <button
         type="submit"
-        value="Add Player"
-      />
+      >
+        Add Player
+      </button>
     </form>
      
     <p>

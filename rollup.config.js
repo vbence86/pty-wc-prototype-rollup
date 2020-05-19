@@ -1,4 +1,5 @@
 import svelte from 'rollup-plugin-svelte';
+import sveltePreprocess from 'svelte-preprocess';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
@@ -7,6 +8,22 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 const BUILD_PATH = 'dist/';
+
+const preprocess = extend => sveltePreprocess({
+  /**
+   * Replace string patterns in your markup 
+   */
+  replace: [
+    [
+      /process\.env\.(\w+)/g,
+      (_, prop) => JSON.stringify(process.env[prop]),
+    ],
+    [/@if\s*\((.*?)\)$/gim, '{#if $1}'],
+    [/@endif$/gim, '{/if}'],
+  ],
+  // custom properties
+  ...extend,
+});
 
 export default {
   input: 'src/main.svelte',
@@ -24,6 +41,7 @@ export default {
       // we're generating a custom element component
       customElement: true,
       include: /main\.svelte$/,
+      preprocess: preprocess(),
     }),
 
     // builds normal svelte components if the target file is not main.svelte
@@ -31,6 +49,7 @@ export default {
       dev: !production,
       customElement: false,
       exclude: /main\.svelte$/,
+      preprocess: preprocess(),
     }),
 
     // If you have external dependencies installed from
@@ -55,7 +74,7 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser()
+    // production && terser()
   ],
   watch: {
     clearScreen: false

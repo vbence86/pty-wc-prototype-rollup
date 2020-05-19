@@ -21,15 +21,19 @@
     "@testing-library/svelte": "^3.0.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
+    "emotion": "^10.0.27",
     "identity-obj-proxy": "^3.0.0",
     "jest": "25.0.0",
+    "node-sass": "^4.14.1",
+    "pty-themes": "^1.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
     "svelte": "^3.0.0",
     "svelte-jester": "^1.0.5",
-    "svelte-loader": "^2.13.6"
+    "svelte-loader": "^2.13.6",
+    "svelte-preprocess": "^3.7.4"
   },
   "dependencies": {
     "sirv-cli": "^0.4.4"

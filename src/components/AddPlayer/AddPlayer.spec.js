@@ -6,7 +6,7 @@ describe('AddPlayer', () => {
   test('can submit new players', async () => {
     const spy = jest.fn();
     const { container, component } = render(AddPlayer);
-    const submitBtn = container.querySelector('input[type="submit"]');
+    const submitBtn = container.querySelector('button[type="submit"]');
 
     component.$on('addplayer', spy);
     await fireEvent.click(submitBtn);
@@ -19,7 +19,7 @@ describe('AddPlayer', () => {
     const { container, component } = render(AddPlayer);
     const nameInput = container.querySelector('input[placeholder="Name"]');
     const scoreInput = container.querySelector('input[placeholder="Score"]');
-    const submitBtn = container.querySelector('input[type="submit"]');
+    const submitBtn = container.querySelector('button[type="submit"]');
 
     const name = 'Test Osteron';
     const score = '99';

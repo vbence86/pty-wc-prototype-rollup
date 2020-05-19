@@ -37,5 +37,5 @@
 <form class="grid-3" on:submit={onSubmit}>
   <input type="text" placeholder="Name" bind:value={player.name} />
   <input type="text" placeholder="Score" bind:value={player.score} />
-  <input class="btn" type="submit" value="Add Player" />
+  <button type="submit">Add Player</button>
 </form>
