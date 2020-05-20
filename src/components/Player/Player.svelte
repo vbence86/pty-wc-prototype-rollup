@@ -48,14 +48,14 @@
   const onRemove = () => dispatch('removeplayer', name);
 </script>
 
-<h1 class={h1}>
+<h1 style={h1}>
   {name}
   <button class="btn btn-sm" on:click={toggleControls}>
     {#if showControls}-{:else}+{/if}
   </button>
    <button class="btn btn-danger btn-sm" on:click={onRemove}>x</button>
 </h1>
-<h3 class={h3}>Score: {score}</h3>
+<h3 style={h3}>Score: {score}</h3>
 {#if showControls}
   <button class="btn" on:click={addPoint}>+</button>
   <button class="btn btn-dark" on:click={removePoint}>-</button>

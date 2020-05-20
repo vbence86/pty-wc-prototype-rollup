@@ -6,7 +6,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "npm run storybook",
-    "storybook": "start-storybook",
+    "storybook": "start-storybook -s ./.storybook/static",
     "test": "jest src",
     "test:watch": "npm run test -- --watch"
   },
@@ -21,7 +21,6 @@
     "@testing-library/svelte": "^3.0.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
-    "emotion": "^10.0.27",
     "identity-obj-proxy": "^3.0.0",
     "jest": "25.0.0",
     "node-sass": "^4.14.1",
@@ -54,5 +53,17 @@
       "^.+\\.svelte$": "svelte-jester"
     },
     "verbose": true
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }

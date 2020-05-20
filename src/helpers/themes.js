@@ -19,3 +19,22 @@ export const applyTheme = (propName = 'cssThemeURI') => {
   style.textContent = `@import "${cssThemeURI}";`;
   host.shadowRoot.insertBefore(style, host.shadowRoot.firstChild);
 };
+
+/**
+ * Replaces the global theme css for Storybook preview mode
+ *
+ * @params {string} themeURI
+ */
+export const loadThemeGlobally = (themeURI) => {
+  const link = document.querySelector('#theme-loader');
+  if (link) {
+    link.parentNode.removeChild(link);
+  }
+
+  const newLink = document.createElement('link');
+  newLink.setAttribute('href', themeURI);
+  newLink.setAttribute('rel', 'stylesheet');
+  newLink.setAttribute('id', '#theme-loader');
+
+  document.head.appendChild(newLink);
+};

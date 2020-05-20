@@ -6,9 +6,6 @@
   import AddPlayer from './components/AddPlayer';
   import { onMount } from 'svelte';
   import { applyTheme } from './helpers/themes';
-  import { emotion } from './helpers/emotion-wrapper';
-
-  const { css } = emotion();
 
   /**
    * Bootstrap function that is invoked when the web component
@@ -53,15 +50,10 @@
     players = players.filter(player => player.name !== evt.detail);
   };
 
-  const containerStyle = css`
-    background-color: #efefea;
-    border: 1px solid green;
-  `;
-
 </script>
 
 <NavBar text="This is my svelte custom element"/>
-<div class={containerStyle}>
+<div class="container">
   <AddPlayer on:addplayer={addPlayer} />
   {#if players.length === 0}
     <p>No players</p>

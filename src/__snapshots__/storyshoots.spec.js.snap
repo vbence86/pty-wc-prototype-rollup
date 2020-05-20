@@ -55,7 +55,11 @@ exports[`Storyshots components/Player With Controls Closed 1`] = `
   class="storybook-snapshot-container"
 >
   <h1
-    class="css-1am0uh0"
+    style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
   >
     Test Osteron
      
@@ -73,7 +77,10 @@ exports[`Storyshots components/Player With Controls Closed 1`] = `
   </h1>
    
   <h3
-    class="css-kalm7l"
+    style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
   >
     Score: 
     99
@@ -88,7 +95,11 @@ exports[`Storyshots components/Player With Controls Open 1`] = `
   class="storybook-snapshot-container"
 >
   <h1
-    class="css-1am0uh0"
+    style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
   >
     Test Osteron
      
@@ -106,7 +117,10 @@ exports[`Storyshots components/Player With Controls Open 1`] = `
   </h1>
    
   <h3
-    class="css-kalm7l"
+    style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
   >
     Score: 
     99
@@ -131,7 +145,7 @@ exports[`Storyshots components/Player With Controls Open 1`] = `
 </section>
 `;
 
-exports[`Storyshots pty-scoreboard With No Players 1`] = `
+exports[`Storyshots pty-scoreboard Betonline Theme With No Players 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -171,7 +185,7 @@ exports[`Storyshots pty-scoreboard With No Players 1`] = `
 </section>
 `;
 
-exports[`Storyshots pty-scoreboard With Players 1`] = `
+exports[`Storyshots pty-scoreboard Betonline Theme With Players 1`] = `
 <section
   class="storybook-snapshot-container"
 >
@@ -205,7 +219,11 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
     </form>
      
     <h1
-      class="css-1am0uh0"
+      style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
     >
       John Doe
        
@@ -223,7 +241,10 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
     </h1>
      
     <h3
-      class="css-kalm7l"
+      style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
     >
       Score: 
       100
@@ -231,7 +252,11 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
      
     
     <h1
-      class="css-1am0uh0"
+      style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
     >
       Charles Smith
        
@@ -249,7 +274,10 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
     </h1>
      
     <h3
-      class="css-kalm7l"
+      style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
     >
       Score: 
       45
@@ -257,7 +285,11 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
      
     
     <h1
-      class="css-1am0uh0"
+      style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
     >
       Sam Teller
        
@@ -275,7 +307,187 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
     </h1>
      
     <h3
-      class="css-kalm7l"
+      style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
+    >
+      Score: 
+      151
+    </h3>
+     
+    
+    
+  </div>
+</section>
+`;
+
+exports[`Storyshots pty-scoreboard Wild Theme With No Players 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="navbar bg-primary"
+  >
+    This is my svelte custom element
+  </div>
+   
+  <div
+    class="container"
+  >
+    <form
+      class="grid-3"
+    >
+      <input
+        placeholder="Name"
+        type="text"
+      />
+       
+      <input
+        placeholder="Score"
+        type="text"
+      />
+       
+      <button
+        type="submit"
+      >
+        Add Player
+      </button>
+    </form>
+     
+    <p>
+      No players
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots pty-scoreboard Wild Theme With Players 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="navbar bg-primary"
+  >
+    This is my svelte custom element
+  </div>
+   
+  <div
+    class="container"
+  >
+    <form
+      class="grid-3"
+    >
+      <input
+        placeholder="Name"
+        type="text"
+      />
+       
+      <input
+        placeholder="Score"
+        type="text"
+      />
+       
+      <button
+        type="submit"
+      >
+        Add Player
+      </button>
+    </form>
+     
+    <h1
+      style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
+    >
+      John Doe
+       
+      <button
+        class="btn btn-sm"
+      >
+        +
+      </button>
+       
+      <button
+        class="btn btn-danger btn-sm"
+      >
+        x
+      </button>
+    </h1>
+     
+    <h3
+      style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
+    >
+      Score: 
+      100
+    </h3>
+     
+    
+    <h1
+      style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
+    >
+      Charles Smith
+       
+      <button
+        class="btn btn-sm"
+      >
+        +
+      </button>
+       
+      <button
+        class="btn btn-danger btn-sm"
+      >
+        x
+      </button>
+    </h1>
+     
+    <h3
+      style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
+    >
+      Score: 
+      45
+    </h3>
+     
+    
+    <h1
+      style="
+  color: #F00;
+  font-size: 2.0rem;
+  white-space: nowrap;
+"
+    >
+      Sam Teller
+       
+      <button
+        class="btn btn-sm"
+      >
+        +
+      </button>
+       
+      <button
+        class="btn btn-danger btn-sm"
+      >
+        x
+      </button>
+    </h1>
+     
+    <h3
+      style="
+  color: #FFA;
+  font-size: 1.2rem;
+"
     >
       Score: 
       151
