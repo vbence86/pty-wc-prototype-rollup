@@ -2,3 +2,10 @@
 /public/build/
 
 .DS_Store
+
+/.storybook/static/
+
+access.log
+error.log
+
+.vscode/launch.json

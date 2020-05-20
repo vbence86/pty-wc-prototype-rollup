@@ -5,6 +5,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "postinstall": "node scripts/postinstall.js",
     "start": "npm run storybook",
     "storybook": "start-storybook -s ./.storybook/static",
     "test": "jest src",
@@ -31,6 +32,7 @@
     "rollup-plugin-livereload": "^1.0.0",
     "rollup-plugin-svelte": "^5.0.3",
     "rollup-plugin-terser": "^5.1.2",
+    "shelljs": "^0.8.4",
     "svelte": "^3.0.0",
     "svelte-jester": "^1.0.5",
     "svelte-loader": "^2.13.6",
