@@ -55,7 +55,7 @@ exports[`Storyshots components/Player With Controls Closed 1`] = `
   class="storybook-snapshot-container"
 >
   <h1
-    class="svelte-9noqbk"
+    class="css-1am0uh0"
   >
     Test Osteron
      
@@ -72,7 +72,9 @@ exports[`Storyshots components/Player With Controls Closed 1`] = `
     </button>
   </h1>
    
-  <h3>
+  <h3
+    class="css-kalm7l"
+  >
     Score: 
     99
   </h3>
@@ -86,7 +88,7 @@ exports[`Storyshots components/Player With Controls Open 1`] = `
   class="storybook-snapshot-container"
 >
   <h1
-    class="svelte-9noqbk"
+    class="css-1am0uh0"
   >
     Test Osteron
      
@@ -103,7 +105,9 @@ exports[`Storyshots components/Player With Controls Open 1`] = `
     </button>
   </h1>
    
-  <h3>
+  <h3
+    class="css-kalm7l"
+  >
     Score: 
     99
   </h3>
@@ -193,15 +197,15 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
         type="text"
       />
        
-      <input
-        class="btn"
+      <button
         type="submit"
-        value="Add Player"
-      />
+      >
+        Add Player
+      </button>
     </form>
      
     <h1
-      class="svelte-9noqbk"
+      class="css-1am0uh0"
     >
       John Doe
        
@@ -218,14 +222,16 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
       </button>
     </h1>
      
-    <h3>
+    <h3
+      class="css-kalm7l"
+    >
       Score: 
       100
     </h3>
      
     
     <h1
-      class="svelte-9noqbk"
+      class="css-1am0uh0"
     >
       Charles Smith
        
@@ -242,14 +248,16 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
       </button>
     </h1>
      
-    <h3>
+    <h3
+      class="css-kalm7l"
+    >
       Score: 
       45
     </h3>
      
     
     <h1
-      class="svelte-9noqbk"
+      class="css-1am0uh0"
     >
       Sam Teller
        
@@ -266,7 +274,9 @@ exports[`Storyshots pty-scoreboard With Players 1`] = `
       </button>
     </h1>
      
-    <h3>
+    <h3
+      class="css-kalm7l"
+    >
       Score: 
       151
     </h3>

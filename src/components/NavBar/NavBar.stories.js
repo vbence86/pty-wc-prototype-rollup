@@ -1,4 +1,4 @@
-import NavBar from '../components/NavBar.svelte';
+import NavBar from './NavBar.svelte';
 
 export default { title: 'components/NavBar' }
 

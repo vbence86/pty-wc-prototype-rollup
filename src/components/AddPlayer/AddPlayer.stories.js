@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 
-import AddPlayer from '../components/AddPlayer.svelte';
+import AddPlayer from './AddPlayer.svelte';
 
 export default { title: 'components/AddPlayer' }
 

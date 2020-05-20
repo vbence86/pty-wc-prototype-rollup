@@ -1,11 +1,28 @@
 <svelte:options tag="pty-scoreboard" />
 
 <script>
-  import { get_current_component } from 'svelte/internal';
+  import NavBar from './components/NavBar/NavBar.svelte';
+  import Player from './components/Player/Player.svelte';
+  import AddPlayer from './components/AddPlayer';
   import { onMount } from 'svelte';
-  import NavBar from './components/NavBar.svelte';
-  import Player from './components/Player.svelte';
-  import AddPlayer from './components/AddPlayer.svelte';
+  import { applyTheme } from './helpers/themes';
+  import { emotion } from './helpers/emotion-wrapper';
+
+  const { css } = emotion();
+
+  /**
+   * Bootstrap function that is invoked when the web component
+   * is mounted to the DOM.
+   */
+  const bootstrap = () => {
+    applyTheme();
+  };
+
+  /**
+   * Lifecycle function that is invoked when the custom element
+   * is attached to the DOM.
+   */
+  onMount(bootstrap);
 
   /**
    * Array of player instances
@@ -36,27 +53,15 @@
     players = players.filter(player => player.name !== evt.detail);
   };
 
-  /**
-   * Lifecycle function that is invoked when the custom element
-   * is attached to the DOM.
-   */
-  onMount((e) => {
-    // we manually extend the shadow DOM to import the theme-specific CSS file
-    const host = get_current_component();
-    const cssThemeURI = host.getAttribute('cssThemeURI');
-
-    if (!cssThemeURI) return;
-    // theme styles must land on the top of the shadow root in order to
-    // provide a natural way to overwrite them
-    const style = document.createElement('style');
-    style.textContent = `@import "${cssThemeURI}";`;
-    host.shadowRoot.insertBefore(style, host.shadowRoot.firstChild);
-  });
+  const containerStyle = css`
+    background-color: #efefea;
+    border: 1px solid green;
+  `;
 
 </script>
 
 <NavBar text="This is my svelte custom element"/>
-<div class="container">
+<div class={containerStyle}>
   <AddPlayer on:addplayer={addPlayer} />
   {#if players.length === 0}
     <p>No players</p>

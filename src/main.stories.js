@@ -1,8 +1,8 @@
 import { action } from '@storybook/addon-actions';
 
-import Component from '../main.svelte';
+import Component from './main.svelte';
 
-export default { title: 'pty-scoreboard' }
+export default { title: 'pty-scoreboard' };
 
 export const withPlayers = () => ({
   Component,
