@@ -2,6 +2,13 @@
   export let text = 'Default Text';
 </script>
 
-<div class="navbar bg-primary">
+<style>
+	div {
+		border: 1px solid grey;
+		background-color: #aaa;
+	}
+</style>
+
+<div class="navbar">
   {text}
 </div>

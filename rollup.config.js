@@ -11,21 +11,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 const BUILD_PATH = 'dist/';
 
-const preprocess = extend => sveltePreprocess({
-  /**
-   * Replace string patterns in your markup 
-   */
-  replace: [
-    [
-      /process\.env\.(\w+)/g,
-      (_, prop) => JSON.stringify(process.env[prop]),
-    ],
-    [/@if\s*\((.*?)\)$/gim, '{#if $1}'],
-    [/@endif$/gim, '{/if}'],
-  ],
-  // custom properties
-  ...extend,
-});
+let transpiledNestedCSS;
 
 export default {
   input: 'src/main.svelte',
@@ -36,6 +22,15 @@ export default {
     file: `${BUILD_PATH}bundle.js`,
   },
   plugins: [
+    // builds normal svelte components if the target file is not main.svelte
+    svelte({
+      dev: !production,
+      // all nested child elementes are built as normal svelte components
+      customElement: false,
+      exclude: /main\.svelte$/,
+      preprocess: sveltePreprocess(),
+    }),
+
     // builds web components if the file is the main.svelte
     svelte({
       // enable run-time checks when not in production
@@ -43,15 +38,7 @@ export default {
       // we're generating a custom element component
       customElement: true,
       include: /main\.svelte$/,
-      preprocess: preprocess(),
-    }),
-
-    // builds normal svelte components if the target file is not main.svelte
-    svelte({
-      dev: !production,
-      customElement: false,
-      exclude: /main\.svelte$/,
-      preprocess: preprocess(),
+      preprocess: sveltePreprocess(),
     }),
 
     // transpile to ES2015+

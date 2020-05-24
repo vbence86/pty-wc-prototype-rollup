@@ -15,9 +15,10 @@ export const applyTheme = (propName = 'cssThemeURI') => {
   if (!cssThemeURI) return;
   // theme styles must land on the top of the shadow root in order to
   // provide a natural way to overwrite them
-  const style = document.createElement('style');
-  style.textContent = `@import "${cssThemeURI}";`;
-  host.shadowRoot.insertBefore(style, host.shadowRoot.firstChild);
+  const link = document.createElement('link');
+  link.setAttribute('href', cssThemeURI);
+  link.setAttribute('rel', 'stylesheet');
+  host.shadowRoot.insertBefore(link, host.shadowRoot.firstChild);
 };
 
 /**
@@ -34,7 +35,7 @@ export const loadThemeGlobally = (themeURI) => {
   const newLink = document.createElement('link');
   newLink.setAttribute('href', themeURI);
   newLink.setAttribute('rel', 'stylesheet');
-  newLink.setAttribute('id', '#theme-loader');
+  newLink.setAttribute('id', 'theme-loader');
 
   document.head.appendChild(newLink);
 };

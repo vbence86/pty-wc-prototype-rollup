@@ -1,6 +1,5 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { h1, h3 } from './styles';
 
   const dispatch = createEventDispatcher();
 
@@ -48,14 +47,27 @@
   const onRemove = () => dispatch('removeplayer', name);
 </script>
 
-<h1 style={h1}>
+<style lang="scss">
+  h1 {
+    color: #F00;
+    font-size: 2.0rem;
+    white-space: nowrap;
+  }
+
+  h3 {
+    color: #FFA;
+    font-size: 1.2rem;
+  }
+</style>
+
+<h1>
   {name}
   <button class="btn btn-sm" on:click={toggleControls}>
     {#if showControls}-{:else}+{/if}
   </button>
    <button class="btn btn-danger btn-sm" on:click={onRemove}>x</button>
 </h1>
-<h3 style={h3}>Score: {score}</h3>
+<h3>Score: {score}</h3>
 {#if showControls}
   <button class="btn" on:click={addPoint}>+</button>
   <button class="btn btn-dark" on:click={removePoint}>-</button>

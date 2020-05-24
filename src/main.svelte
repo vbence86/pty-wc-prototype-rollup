@@ -52,6 +52,10 @@
 
 </script>
 
+<style>
+  @import 'nestedStyles';
+</style>
+
 <NavBar text="This is my svelte custom element"/>
 <div class="container">
   <AddPlayer on:addplayer={addPlayer} />
