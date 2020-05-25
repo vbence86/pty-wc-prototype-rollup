@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { loadThemeGlobally } from './helpers/themes';
+import { loadThemeGlobally } from './core/themes';
 
 import Component from './main.svelte';
 

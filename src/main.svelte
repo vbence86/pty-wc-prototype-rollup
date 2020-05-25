@@ -1,25 +1,7 @@
-<svelte:options tag="pty-scoreboard" />
-
 <script>
   import NavBar from './components/NavBar/NavBar.svelte';
   import Player from './components/Player/Player.svelte';
   import AddPlayer from './components/AddPlayer';
-  import { onMount } from 'svelte';
-  import { applyTheme } from './helpers/themes';
-
-  /**
-   * Bootstrap function that is invoked when the web component
-   * is mounted to the DOM.
-   */
-  const bootstrap = () => {
-    applyTheme();
-  };
-
-  /**
-   * Lifecycle function that is invoked when the custom element
-   * is attached to the DOM.
-   */
-  onMount(bootstrap);
 
   /**
    * Array of player instances
@@ -51,10 +33,6 @@
   };
 
 </script>
-
-<style>
-  @import 'nestedStyles';
-</style>
 
 <NavBar text="This is my svelte custom element"/>
 <div class="container">

@@ -4,6 +4,7 @@ const babel = require('rollup-plugin-babel');
 const injectProcessEnv = require('rollup-plugin-inject-process-env');
 const resolve = require('@rollup/plugin-node-resolve');
 const commonjs = require('@rollup/plugin-commonjs');
+const replace = require('@rollup/plugin-replace');
 const livereload = require('rollup-plugin-livereload');
 const terser = require('rollup-plugin-terser').terser;
 
@@ -14,19 +15,21 @@ const appPath = path.resolve(__dirname, '../');
 
 const production = !process.env.ROLLUP_WATCH;
 const buildPath = `${appPath}/dist`;
+const entryPoint = `${appPath}/src/core/bridge.svelte`;
+const moduleName = require('../package.json').name;
 
 const outputOptions = {
   sourcemap: true,
   format: 'iife',
   name: 'App',
-  file: `${buildPath}/bundle.js`,
+  file: `${buildPath}/${moduleName}.js`,
 };
 
 async function generateNestedCSS() {
   let cssChunk;
   // create a bundle  
   const bundle = await rollup.rollup({
-    input: `${appPath}/src/main.svelte`,
+    input: entryPoint,
     plugins: [
       svelte({
         // all nested child elementes are built as normal svelte components
@@ -57,13 +60,14 @@ async function generateNestedCSS() {
 async function buildWebComponent(nestedCSS) {
   // create a bundle
   const bundle = await rollup.rollup({
-    input: `${appPath}/src/main.svelte`,
+    input: entryPoint,
     plugins: [
+      replace({ 'tag-name-to-replace': moduleName }),
       svelte({
         dev: false,
         // all nested child elementes are built as normal svelte components
         customElement: false,
-        exclude: /main\.svelte$/,
+        exclude: /bridge\.svelte$/,
         preprocess: sveltePreprocess(),
       }),
       svelte({
@@ -71,7 +75,7 @@ async function buildWebComponent(nestedCSS) {
         dev: !production,
         // we're generating a -- Web Component --
         customElement: true,
-        include: /main\.svelte$/,
+        include: /bridge\.svelte$/,
         preprocess: sveltePreprocess(),
       }),
 
@@ -103,14 +107,14 @@ async function buildWebComponent(nestedCSS) {
 
       // If we're building for production (npm run build
       // instead of npm run dev), minify
-      //production && terser()
+      production && terser()
     ],
   });
 
   // generate output specific code in-memory
   // you can call this function multiple times on the same bundle object
   const { output } = await bundle.generate(outputOptions);
-  const { code } = output[0];
+  const { code, map } = output[0];
 
   const updatedCode = code.replace(`@import 'nestedStyles'`, nestedCSS);
 
@@ -118,6 +122,9 @@ async function buildWebComponent(nestedCSS) {
     if (err) return console.log(err);
   });
 
+  fs.writeFile(outputOptions.file.replace('.js', '.js.map'), map, (err) => {
+    if (err) return console.log(err);
+  });
 }
 
 async function build() {
