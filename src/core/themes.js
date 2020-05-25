@@ -9,8 +9,9 @@ import { get_current_component } from 'svelte/internal';
 export const applyTheme = (propName = 'cssThemeURI') => {
   // we manually extend the shadow DOM to import the theme-specific CSS file
   const host = get_current_component();
+  const meta = document.head.querySelector('meta[property="pty:themeURL"]');
 
-  const cssThemeURI = host.getAttribute && host.getAttribute(propName);
+  let cssThemeURI = host.getAttribute(propName) || meta.getAttribute('content');
 
   if (!cssThemeURI) return;
   // theme styles must land on the top of the shadow root in order to
