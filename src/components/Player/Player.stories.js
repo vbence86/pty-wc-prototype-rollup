@@ -2,10 +2,10 @@ import { action } from '@storybook/addon-actions';
 
 import Player from './Player.svelte';
 
-export default { title: 'components/Player' }
+export default { title: 'components/Player' };
 
 const removeAction = action('Triggers removeplayer event');
-const removeplayer = e => removeAction(e.detail);
+const removeplayer = (e) => removeAction(e.detail);
 const playerData = {
   name: 'Test Osteron',
   score: 99,
@@ -14,7 +14,7 @@ const playerData = {
 export const withControlsClosed = () => ({
   Component: Player,
   props: {
-    ...playerData
+    ...playerData,
   },
   on: {
     removeplayer,

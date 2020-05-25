@@ -1,4 +1,4 @@
-<svelte:options tag="tag-name-to-replace" />
+<svelte:options tag="module-name" />
 
 <script>
   import { onMount } from 'svelte';

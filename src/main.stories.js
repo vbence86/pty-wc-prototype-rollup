@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import { loadThemeGlobally } from './core/themes';
 
 import Component from './main.svelte';
@@ -25,14 +24,14 @@ export const BetonlineThemeWithPlayers = () => {
   return {
     Component,
     props: { players: mockPlayers },
-  }
+  };
 };
 
 export const BetonlineThemeWithNoPlayers = () => {
   loadThemeGlobally('bol.css');
   return {
     Component,
-  }
+  };
 };
 
 export const WildThemeWithPlayers = () => {
@@ -40,12 +39,12 @@ export const WildThemeWithPlayers = () => {
   return {
     Component,
     props: { players: mockPlayers },
-  }
+  };
 };
 
 export const WildThemeWithNoPlayers = () => {
   loadThemeGlobally('wild.css');
   return {
     Component,
-  }
+  };
 };

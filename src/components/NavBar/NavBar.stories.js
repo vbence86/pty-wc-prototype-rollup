@@ -1,6 +1,6 @@
 import NavBar from './NavBar.svelte';
 
-export default { title: 'components/NavBar' }
+export default { title: 'components/NavBar' };
 
 export const withText = () => ({
   Component: NavBar,

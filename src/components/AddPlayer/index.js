@@ -1,3 +1,3 @@
-import AddPlayer from "./AddPlayer.svelte";
+import AddPlayer from './AddPlayer.svelte';
 
 export default AddPlayer;

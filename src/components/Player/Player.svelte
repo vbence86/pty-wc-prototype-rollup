@@ -29,17 +29,23 @@
   /**
    * Adds a single point to the score
    */
-  const addPoint = () => (score += 1);
+  const addPoint = () => {
+    score += 1;
+  };
 
   /**
    * Deducts a single point from the score
    */
-  const removePoint = () => (score -= 1);
+  const removePoint = () => {
+    score -= 1;
+  };
 
   /**
    * Toggles the control section
    */
-  const toggleControls = () => (showControls = !showControls);
+  const toggleControls = () => {
+    showControls = !showControls;
+  };
 
   /**
    * Dispatches an event against this component

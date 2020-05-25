@@ -62,7 +62,7 @@ async function buildWebComponent(nestedCSS) {
   const bundle = await rollup.rollup({
     input: entryPoint,
     plugins: [
-      replace({ 'tag-name-to-replace': moduleName }),
+      replace({ 'module-name': moduleName }),
       svelte({
         dev: false,
         // all nested child elementes are built as normal svelte components

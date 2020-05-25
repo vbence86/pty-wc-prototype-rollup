@@ -29,7 +29,7 @@
    * @param {object} evt - { detail: string }
    */
   const removePlayer = (evt) => {
-    players = players.filter(player => player.name !== evt.detail);
+    players = players.filter((player) => player.name !== evt.detail);
   };
 
 </script>
