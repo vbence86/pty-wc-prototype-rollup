@@ -1,500 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots components/AddPlayer Add Action 1`] = `
+exports[`Storyshots Web Component With Betonline Theme 1`] = `
 <section
   class="storybook-snapshot-container"
 >
-  <form
-    class="grid-3"
+  <div
+    class="hello-world-container svelte-1tnts3"
   >
-    <input
-      placeholder="Name"
-      type="text"
-    />
+    <p
+      class="svelte-1tnts3"
+    >
+      Hello 
+      betonline
+      !
+    </p>
      
-    <input
-      placeholder="Score"
-      type="text"
-    />
+    <form>
+      <div
+        class="form-group"
+      >
+        <label
+          for="email"
+        >
+          Email address
+        </label>
+         
+        <input
+          aria-describedby="emailHelp"
+          class="form-control"
+          id="email"
+          type="email"
+        />
+         
+        <small
+          class="form-text text-muted"
+          id="emailHelp"
+        >
+          We'll never share your email with anyone else.
+        </small>
+      </div>
+       
+      <div
+        class="form-group"
+      >
+        <label
+          for="password"
+        >
+          Password
+        </label>
+         
+        <input
+          class="form-control"
+          id="password"
+          type="password"
+        />
+      </div>
+       
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Web Component With Wild Theme 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <div
+    class="hello-world-container svelte-1tnts3"
+  >
+    <p
+      class="svelte-1tnts3"
+    >
+      Hello 
+      wild
+      !
+    </p>
+     
+    <form>
+      <div
+        class="form-group"
+      >
+        <label
+          for="email"
+        >
+          Email address
+        </label>
+         
+        <input
+          aria-describedby="emailHelp"
+          class="form-control"
+          id="email"
+          type="email"
+        />
+         
+        <small
+          class="form-text text-muted"
+          id="emailHelp"
+        >
+          We'll never share your email with anyone else.
+        </small>
+      </div>
+       
+      <div
+        class="form-group"
+      >
+        <label
+          for="password"
+        >
+          Password
+        </label>
+         
+        <input
+          class="form-control"
+          id="password"
+          type="password"
+        />
+      </div>
+       
+      <button
+        class="btn btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+`;
+
+exports[`Storyshots components/NestedElement Submit Action 1`] = `
+<section
+  class="storybook-snapshot-container"
+>
+  <form>
+    <div
+      class="form-group"
+    >
+      <label
+        for="email"
+      >
+        Email address
+      </label>
+       
+      <input
+        aria-describedby="emailHelp"
+        class="form-control"
+        id="email"
+        type="email"
+      />
+       
+      <small
+        class="form-text text-muted"
+        id="emailHelp"
+      >
+        We'll never share your email with anyone else.
+      </small>
+    </div>
+     
+    <div
+      class="form-group"
+    >
+      <label
+        for="password"
+      >
+        Password
+      </label>
+       
+      <input
+        class="form-control"
+        id="password"
+        type="password"
+      />
+    </div>
      
     <button
+      class="btn btn-primary"
       type="submit"
     >
-      Add Player
+      Submit
     </button>
   </form>
-</section>
-`;
-
-exports[`Storyshots components/NavBar With Default Text 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="navbar bg-primary"
-  >
-    Default Text
-  </div>
-</section>
-`;
-
-exports[`Storyshots components/NavBar With Text 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="navbar bg-primary"
-  >
-    some text
-  </div>
-</section>
-`;
-
-exports[`Storyshots components/Player With Controls Closed 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <h1
-    style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-  >
-    Test Osteron
-     
-    <button
-      class="btn btn-sm"
-    >
-      +
-    </button>
-     
-    <button
-      class="btn btn-danger btn-sm"
-    >
-      x
-    </button>
-  </h1>
-   
-  <h3
-    style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-  >
-    Score: 
-    99
-  </h3>
-   
-  
-</section>
-`;
-
-exports[`Storyshots components/Player With Controls Open 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <h1
-    style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-  >
-    Test Osteron
-     
-    <button
-      class="btn btn-sm"
-    >
-      -
-    </button>
-     
-    <button
-      class="btn btn-danger btn-sm"
-    >
-      x
-    </button>
-  </h1>
-   
-  <h3
-    style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-  >
-    Score: 
-    99
-  </h3>
-   
-  <button
-    class="btn"
-  >
-    +
-  </button>
-   
-  <button
-    class="btn btn-dark"
-  >
-    -
-  </button>
-   
-  <input
-    type="text"
-  />
-  
-</section>
-`;
-
-exports[`Storyshots pty-scoreboard Betonline Theme With No Players 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="navbar bg-primary"
-  >
-    This is my svelte custom element
-  </div>
-   
-  <div
-    class="container"
-  >
-    <form
-      class="grid-3"
-    >
-      <input
-        placeholder="Name"
-        type="text"
-      />
-       
-      <input
-        placeholder="Score"
-        type="text"
-      />
-       
-      <button
-        type="submit"
-      >
-        Add Player
-      </button>
-    </form>
-     
-    <p>
-      No players
-    </p>
-  </div>
-</section>
-`;
-
-exports[`Storyshots pty-scoreboard Betonline Theme With Players 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="navbar bg-primary"
-  >
-    This is my svelte custom element
-  </div>
-   
-  <div
-    class="container"
-  >
-    <form
-      class="grid-3"
-    >
-      <input
-        placeholder="Name"
-        type="text"
-      />
-       
-      <input
-        placeholder="Score"
-        type="text"
-      />
-       
-      <button
-        type="submit"
-      >
-        Add Player
-      </button>
-    </form>
-     
-    <h1
-      style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-    >
-      John Doe
-       
-      <button
-        class="btn btn-sm"
-      >
-        +
-      </button>
-       
-      <button
-        class="btn btn-danger btn-sm"
-      >
-        x
-      </button>
-    </h1>
-     
-    <h3
-      style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-    >
-      Score: 
-      100
-    </h3>
-     
-    
-    <h1
-      style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-    >
-      Charles Smith
-       
-      <button
-        class="btn btn-sm"
-      >
-        +
-      </button>
-       
-      <button
-        class="btn btn-danger btn-sm"
-      >
-        x
-      </button>
-    </h1>
-     
-    <h3
-      style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-    >
-      Score: 
-      45
-    </h3>
-     
-    
-    <h1
-      style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-    >
-      Sam Teller
-       
-      <button
-        class="btn btn-sm"
-      >
-        +
-      </button>
-       
-      <button
-        class="btn btn-danger btn-sm"
-      >
-        x
-      </button>
-    </h1>
-     
-    <h3
-      style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-    >
-      Score: 
-      151
-    </h3>
-     
-    
-    
-  </div>
-</section>
-`;
-
-exports[`Storyshots pty-scoreboard Wild Theme With No Players 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="navbar bg-primary"
-  >
-    This is my svelte custom element
-  </div>
-   
-  <div
-    class="container"
-  >
-    <form
-      class="grid-3"
-    >
-      <input
-        placeholder="Name"
-        type="text"
-      />
-       
-      <input
-        placeholder="Score"
-        type="text"
-      />
-       
-      <button
-        type="submit"
-      >
-        Add Player
-      </button>
-    </form>
-     
-    <p>
-      No players
-    </p>
-  </div>
-</section>
-`;
-
-exports[`Storyshots pty-scoreboard Wild Theme With Players 1`] = `
-<section
-  class="storybook-snapshot-container"
->
-  <div
-    class="navbar bg-primary"
-  >
-    This is my svelte custom element
-  </div>
-   
-  <div
-    class="container"
-  >
-    <form
-      class="grid-3"
-    >
-      <input
-        placeholder="Name"
-        type="text"
-      />
-       
-      <input
-        placeholder="Score"
-        type="text"
-      />
-       
-      <button
-        type="submit"
-      >
-        Add Player
-      </button>
-    </form>
-     
-    <h1
-      style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-    >
-      John Doe
-       
-      <button
-        class="btn btn-sm"
-      >
-        +
-      </button>
-       
-      <button
-        class="btn btn-danger btn-sm"
-      >
-        x
-      </button>
-    </h1>
-     
-    <h3
-      style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-    >
-      Score: 
-      100
-    </h3>
-     
-    
-    <h1
-      style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-    >
-      Charles Smith
-       
-      <button
-        class="btn btn-sm"
-      >
-        +
-      </button>
-       
-      <button
-        class="btn btn-danger btn-sm"
-      >
-        x
-      </button>
-    </h1>
-     
-    <h3
-      style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-    >
-      Score: 
-      45
-    </h3>
-     
-    
-    <h1
-      style="
-  color: #F00;
-  font-size: 2.0rem;
-  white-space: nowrap;
-"
-    >
-      Sam Teller
-       
-      <button
-        class="btn btn-sm"
-      >
-        +
-      </button>
-       
-      <button
-        class="btn btn-danger btn-sm"
-      >
-        x
-      </button>
-    </h1>
-     
-    <h3
-      style="
-  color: #FFA;
-  font-size: 1.2rem;
-"
-    >
-      Score: 
-      151
-    </h3>
-     
-    
-    
-  </div>
 </section>
 `;

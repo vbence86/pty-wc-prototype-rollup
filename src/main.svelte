@@ -1,47 +1,40 @@
 <script>
-  import NavBar from './components/NavBar/NavBar.svelte';
-  import Player from './components/Player/Player.svelte';
-  import AddPlayer from './components/AddPlayer';
+  // @TODO Import your components here
+  // ...
+  import NestedElement from './components/NestedElement';
 
   /**
-   * Array of player instances
+   * Represents the name property of the web component
    *
-   * @type {array}
+   * @type {string}
    */
-  export let players = [];
+  export let name = 'World';
 
-  /**
-   * Adds a new player to the player collection.
-   *
-   * @param {object} evt - { detail: object }
-   */
-  const addPlayer = (evt) => {
-    const player = evt.detail;
-    players = [
-      ...players,
-      player,
-    ];
-  };
-
-  /**
-   * Deletes the given player to the player collection.
-   *
-   * @param {object} evt - { detail: string }
-   */
-  const removePlayer = (evt) => {
-    players = players.filter((player) => player.name !== evt.detail);
-  };
-
+  // @TODO add any public properties here through which the web component can communicate with the outside world
 </script>
 
-<NavBar text="This is my svelte custom element"/>
-<div class="container">
-  <AddPlayer on:addplayer={addPlayer} />
-  {#if players.length === 0}
-    <p>No players</p>
-  {:else}
-    {#each players as player}
-      <Player name={player.name} score={player.score} on:removeplayer={removePlayer} />
-    {/each}
-  {/if}
+<style>
+  .hello-world-container {
+    height: 5rem;
+    margin: auto;
+    width: 25rem;
+  }
+
+  p {
+    color: #00F;
+    font-size: 1.5rem;
+    text-shadow: 0 0 0.85rem rgba(0, 0, 0, .5);
+  }
+
+  /* @TODO add your SASS style definitions here */  
+</style>
+
+<!-- @TODO put the markup of the web component here -->
+<div class="hello-world-container">
+
+  <p>Hello {name}!</p>
+
+  <!-- @TODO you can break the application logic into child components-->
+  <NestedElement />
+
 </div>

@@ -34,7 +34,7 @@ async function generateNestedCSS() {
       svelte({
         // all nested child elementes are built as normal svelte components
         customElement: false,
-        exclude: /main\.svelte$/,
+        exclude: /bridge\.svelte$/,
         preprocess: sveltePreprocess(),
 
         // Extract CSS into a variable
@@ -42,8 +42,12 @@ async function generateNestedCSS() {
       }),
       svelte({
         customElement: true,
-        include: /main\.svelte$/,
+        include: /bridge\.svelte$/,
       }),
+      // transpile to ES2015+
+      babel({
+        extensions: [ '.js', '.mjs', '.html', '.svelte' ],
+      }),      
       resolve({
         browser: true,
         dedupe: ['svelte'],
