@@ -36,6 +36,8 @@ npm install
 ```bash
 npm start
 ```
+<img width="1440" alt="Screenshot 2020-05-26 at 12 41 40" src="https://user-images.githubusercontent.com/6104164/82892136-37770080-9f4f-11ea-82b3-3eb0f69d69e0.png">
+
 
 You should see your web component running in a [Storybook](https://rollupjs.org) test environment. It uses live-reload so all changes will be automatically reflected if any of the files in `src` is updated.
 
@@ -62,6 +64,17 @@ npm run lint
 
 ```bash
 npm test
+```
+
+<img width="509" alt="Screenshot 2020-05-26 at 12 42 15" src="https://user-images.githubusercontent.com/6104164/82892106-2d550200-9f4f-11ea-835c-8e8f53171660.png">
+
+### Snapshots
+
+[Jest](https://jestjs.io/) utilizes the [Storybook's](http://storybook.com) storyshots integration to automatically generate snapshots. If you intentionally update the component and the snapshots do not match any longer you could ask [Jest](https://jestjs.io/) to regenerate the snapshots using the following command:
+
+To regenerate the snapshots
+```bash
+npm test -- -u
 ```
 
 ## Usage of the generated web component
@@ -110,16 +123,19 @@ For transparency into our release cycle and in striving to maintain backward com
 
 See  [the Releases section of our GitHub project](https://github.com/vbence86/pty-themes/releases)  for changelogs for each release version. 
 
+## Changelog
+
+See  [the Releases section of our GitHub project](https://github.com/vbence86/pty-create-webcomponent/releases) for changelogs. 
 
 ## References
-### Svelte Crush Course
+#### Svelte Crush Course
 https://www.youtube.com/watch?v=uK2RnIzrQ0M
 
-### Event Dispatching with Svelte
+#### Event Dispatching with Svelte
 https://www.youtube.com/watch?v=9Bk7XFRMzgI
 
-### Custom Elements with Svelte
+#### Custom Elements with Svelte
 https://www.youtube.com/watch?v=p3u5rdJH9BM
 
-### Storybook
+#### Storybook
 https://www.youtube.com/watch?v=p-LFh5Y89eM
