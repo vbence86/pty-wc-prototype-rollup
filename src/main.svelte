@@ -17,7 +17,7 @@
    *
    * @type {string}
    */
-  const private = 'cannot see from the outside world';
+  const myVariable = 'cannot see from the outside world';
 
   // @TODO add any public properties here through which the web component can communicate with the outside world
 
