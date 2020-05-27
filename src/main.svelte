@@ -1,7 +1,5 @@
 <script>
 
-  import { get_current_component } from 'svelte/internal';
-
   // @TODO Import your components here
   // ...
   import NestedElement from './components/NestedElement';
@@ -15,9 +13,10 @@
   export let name = 'World';
 
   /**
-   * Demo event callback 
+   * Demo event callback
    *
    * @param {object} e - event object
+   * @type {Function}
    */
   const eventCallback = (e) => console.log(e);
 
