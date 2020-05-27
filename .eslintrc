@@ -1,12 +1,16 @@
 {      
-  "extends": ["airbnb"],
+  "extends": [
+    "airbnb",
+    "plugin:jsdoc/recommended"
+  ],
   "root": true,
   "env": {
     "es6": true,
     "browser": true
   },
   "plugins": [
-    "svelte3"
+    "svelte3",
+    "jsdoc"
   ],
   "overrides": [
     {

@@ -20,7 +20,7 @@
   /**
    * Dispatches the newly created player instance
    *
-   * @param {object} e
+   * @param {object} e - event object
    */
   const onSubmit = (e) => {
     e.preventDefault();
