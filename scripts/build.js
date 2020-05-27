@@ -7,14 +7,14 @@ const commonjs = require('@rollup/plugin-commonjs');
 const replace = require('@rollup/plugin-replace');
 const livereload = require('rollup-plugin-livereload');
 const terser = require('rollup-plugin-terser').terser;
-
+const shell = require('shelljs');
 const fs = require('fs');
 const path = require('path');
 const rollup = require('rollup');
 const appPath = path.resolve(__dirname, '../');
 
 const production = !process.env.ROLLUP_WATCH;
-const buildPath = `${appPath}/dist`;
+const buildPath = 'dist';
 const entryPoint = `${appPath}/src/core/bridge.svelte`;
 const moduleName = require('../package.json').name;
 
@@ -61,7 +61,10 @@ async function generateNestedCSS() {
   return cssChunk;
 }
 
-async function buildWebComponent(nestedCSS) {
+async function buildWebComponent({
+  nestedCSS,
+  minify,
+}) {
   // create a bundle
   const bundle = await rollup.rollup({
     input: entryPoint,
@@ -111,7 +114,7 @@ async function buildWebComponent(nestedCSS) {
 
       // If we're building for production (npm run build
       // instead of npm run dev), minify
-      production && terser()
+      minify && terser()
     ],
   });
 
@@ -121,20 +124,29 @@ async function buildWebComponent(nestedCSS) {
   const { code, map } = output[0];
 
   const updatedCode = code.replace(`@import 'nestedStyles'`, nestedCSS);
+  const fileName = minify
+    ? `${outputOptions.file.replace('.js', '.min.js')}`
+    : outputOptions.file;
 
-  fs.writeFile(outputOptions.file, updatedCode, (err) => {
+  fs.writeFile(fileName, updatedCode, (err) => {
     if (err) return console.log(err);
   });
 
-  fs.writeFile(outputOptions.file.replace('.js', '.js.map'), map, (err) => {
-    if (err) return console.log(err);
-  });
+  if (minify) {
+    fs.writeFile(fileName.replace('.js', '.js.map'), map, (err) => {
+      if (err) return console.log(err);
+    });
+  }
 }
 
 async function build() {
   try {
+    shell.mkdir('-p', buildPath);
     const nestedCSS = await generateNestedCSS();
-    await buildWebComponent(nestedCSS);
+    // builds readable bundle of the web component 
+    await buildWebComponent({ nestedCSS, minify: false });
+    // builds minified bundle with sourcemap
+    await buildWebComponent({ nestedCSS, minify: true });
   } catch (ex) {
     console.log(ex);
   }
