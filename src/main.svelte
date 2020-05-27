@@ -21,14 +21,13 @@
    */
   const eventCallback = (e) => console.log(e);
 
-  // example of setting up listeners against custom events
-  // propagated to the ShadowDOM from the outside world
-  const host = get_current_component();
-  host.$on('pty-custom-event', eventCallback);
-
   // @TODO add any public properties here through which the web component can communicate with the outside world
   // ...
 </script>
+
+<svelte:body
+  on:my-custom-event={eventCallback}
+/>
 
 <style>
 

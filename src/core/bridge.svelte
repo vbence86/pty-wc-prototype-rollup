@@ -1,9 +1,7 @@
 <svelte:options tag="module-name" />
 
 <script>
-  import { bubble } from 'svelte/internal';
   import { onMount } from 'svelte';
-  import { proxyHost } from './utils';
   import { applyTheme } from './themes';
   import Main from '../main.svelte';
 
@@ -17,11 +15,6 @@
     // we apply the global styles by moving them over into
     // the attached ShadowDOM of this web component
     applyTheme();
-
-    // proxies custom events coming from the DOM custom element
-    proxyHost((host) => {
-      host.addEventListener('pty-custom-event', (e) => bubble(main, e));
-    });
   };
 
   // executes the bootstrapping on "mount" lifecycle event
