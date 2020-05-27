@@ -68,6 +68,28 @@ npm test
 
 <img width="509" alt="Screenshot 2020-05-26 at 12 42 15" src="https://user-images.githubusercontent.com/6104164/82892106-2d550200-9f4f-11ea-835c-8e8f53171660.png">
 
+### Styleguide
+
+The code styleguide is defined in [`.eslintrc`](https://eslint.org/docs/user-guide/configuring). It extends the wastly popular **[airbnb](https://www.npmjs.com/package/eslint-config-airbnb)** styleguide and forces all functions to be equipped with [jsdoc](https://jsdoc.app/) annotations.
+
+### JSDoc Annotations
+
+All functions / methods in the project must be annotated with valid [jsdoc](https://jsdoc.app/) headers.
+```js
+/**
+ * Adds the given parameters and returns the result.
+ * @memberOf my-component
+ * @param {number} a - first number to add
+ * @param {number} b - second number to add
+ * @returns {number}
+ * @example
+ * add(15, 20); // 35
+ */
+const add = (a, b) => {
+	return parseInt(a, 10) + parseInt(b, 10);
+}
+```
+
 ### Snapshots
 
 [Jest](https://jestjs.io/) utilizes the [Storybook's](http://storybook.com) storyshots integration to automatically generate snapshots. If you intentionally update the component and the snapshots do not match any longer you could ask [Jest](https://jestjs.io/) to regenerate the snapshots using the following command:
