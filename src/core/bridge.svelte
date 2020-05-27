@@ -20,4 +20,6 @@
   @import 'nestedStyles';
 </style>
 
-<Main {...$$props} />
+<Main {...$$props}>
+  <slot></slot>
+</Main>
