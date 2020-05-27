@@ -1,5 +1,7 @@
 <script>
-  
+
+  import { get_current_component } from 'svelte/internal';
+
   // @TODO Import your components here
   // ...
   import NestedElement from './components/NestedElement';
@@ -7,12 +9,25 @@
   /**
    * Represents the "name" attribute of the web component
    *
+   * @public
    * @type {string}
    */
   export let name = 'World';
 
-  // @TODO add any public properties here through which the web component can communicate with the outside world
+  /**
+   * Demo event callback 
+   *
+   * @param {object} e - event object
+   */
+  const eventCallback = (e) => console.log(e);
 
+  // example of setting up listeners against custom events
+  // propagated to the ShadowDOM from the outside world
+  const host = get_current_component();
+  host.$on('pty-custom-event', eventCallback);
+
+  // @TODO add any public properties here through which the web component can communicate with the outside world
+  // ...
 </script>
 
 <style>
