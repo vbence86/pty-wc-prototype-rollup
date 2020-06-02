@@ -11,7 +11,7 @@ export const applyTheme = (propName = 'cssThemeURI') => {
   const host = get_current_component();
   const meta = document.head.querySelector('meta[property="pty:themeURL"]');
 
-  let cssThemeURI = host.getAttribute(propName) || meta.getAttribute('content');
+  let cssThemeURI = host.getAttribute && host.getAttribute(propName) || meta && meta.getAttribute('content');
 
   if (!cssThemeURI) return;
   // theme styles must land on the top of the shadow root in order to

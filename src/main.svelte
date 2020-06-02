@@ -1,8 +1,24 @@
+<svelte:options tag="module-name" />
 <script>
+  import { onMount } from 'svelte';
+  import { applyTheme } from './core/themes';
 
   // @TODO Import your components here
   // ...
   import NestedElement from './components/NestedElement';
+
+  /**
+   * Bootstrap function that is invoked when the web component
+   * is mounted to the DOM.
+   */
+  const bootstrap = () => {
+    // we apply the global styles by moving them over into
+    // the attached ShadowDOM of this web component
+    applyTheme();
+  };
+
+  // executes the bootstrapping on "mount" lifecycle event
+  onMount(bootstrap);
 
   /**
    * Represents the "name" attribute of the web component
@@ -22,6 +38,7 @@
 
   // @TODO add any public properties here through which the web component can communicate with the outside world
   // ...
+
 </script>
 
 <svelte:body
@@ -44,7 +61,10 @@
     text-shadow: 0 0 0.85rem rgba(0, 0, 0, .5);
   }
 
-  /* @TODO Add your style definitions here */  
+  /* @TODO Add your style definitions here */ 
+
+  /* Nested style definitions */
+  @import 'nestedStyles';
 
 </style>
 

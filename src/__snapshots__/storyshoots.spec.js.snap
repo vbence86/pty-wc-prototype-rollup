@@ -6,10 +6,10 @@ exports[`Storyshots Web Component With Betonline Theme 1`] = `
 >
    
   <div
-    class="hello-world-container svelte-e6fbkx"
+    class="hello-world-container svelte-yfg3v2"
   >
     <p
-      class="svelte-e6fbkx"
+      class="svelte-yfg3v2"
     >
       Hello 
       betonline
@@ -74,10 +74,10 @@ exports[`Storyshots Web Component With Wild Theme 1`] = `
 >
    
   <div
-    class="hello-world-container svelte-e6fbkx"
+    class="hello-world-container svelte-yfg3v2"
   >
     <p
-      class="svelte-e6fbkx"
+      class="svelte-yfg3v2"
     >
       Hello 
       wild

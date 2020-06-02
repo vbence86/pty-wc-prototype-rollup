@@ -15,7 +15,7 @@ const appPath = path.resolve(__dirname, '../');
 
 const production = !process.env.ROLLUP_WATCH;
 const buildPath = 'dist';
-const entryPoint = `${appPath}/src/core/bridge.svelte`;
+const entryPoint = `${appPath}/src/main.svelte`;
 const moduleName = require('../package.json').name;
 
 const outputOptions = {
@@ -34,7 +34,7 @@ async function generateNestedCSS() {
       svelte({
         // all nested child elementes are built as normal svelte components
         customElement: false,
-        exclude: /bridge\.svelte$/,
+        exclude: /main\.svelte$/,
         preprocess: sveltePreprocess(),
 
         // Extract CSS into a variable
@@ -42,7 +42,7 @@ async function generateNestedCSS() {
       }),
       svelte({
         customElement: true,
-        include: /bridge\.svelte$/,
+        include: /main\.svelte$/,
       }),
       // transpile to ES2015+
       babel({
@@ -74,7 +74,7 @@ async function buildWebComponent({
         dev: false,
         // all nested child elementes are built as normal svelte components
         customElement: false,
-        exclude: /bridge\.svelte$/,
+        exclude: /main\.svelte$/,
         preprocess: sveltePreprocess(),
       }),
       svelte({
@@ -82,7 +82,7 @@ async function buildWebComponent({
         dev: !production,
         // we're generating a -- Web Component --
         customElement: true,
-        include: /bridge\.svelte$/,
+        include: /main\.svelte$/,
         preprocess: sveltePreprocess(),
       }),
 
