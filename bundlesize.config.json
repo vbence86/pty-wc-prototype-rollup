@@ -1,0 +1,8 @@
+{
+  "files": [
+    {
+      "path": "dist/**/*.min.js",
+      "maxSize": "50 kB"
+    }
+  ]
+}
