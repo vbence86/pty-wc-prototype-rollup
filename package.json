@@ -6,9 +6,6 @@
     "type": "git",
     "url": "git+https://github.com/vbence86/pty-wc-template-rollup.git"
   },
-  "publishConfig": {
-    "registry": "http://localhost:8081/repository/npm-private/"
-  },
   "bugs": {
     "url": "https://github.com/vbence86/pty-wc-template-rollup/issues"
   },
